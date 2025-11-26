@@ -3,7 +3,7 @@ import Feed from "../components/Feed"
 const MyMessages = () => {
     return (
         <>
-            <Feed title="Мои сообщения" />
+            <Feed title="Мои сообщения" myOwn={true} />
         </>
     )
 }

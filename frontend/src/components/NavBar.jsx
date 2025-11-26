@@ -17,9 +17,14 @@ const NavBar = () => {
                             <Link to={"/signin"}>Войти</Link>
                         </li>
                     ) : (
-                        <li>
-                            <Link to={"/logout"}>Выйти</Link>
-                        </li>
+                        <>
+                            <li>
+                                <Link to={"/my-messages"}>Мои сообщения</Link>
+                            </li>
+                            <li>
+                                <Link to={"/logout"}>Выйти</Link>
+                            </li>
+                        </>
                     )}
                 </ul>
             </div>
