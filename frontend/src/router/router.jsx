@@ -5,6 +5,7 @@ import Layout from "../pages/Layout"
 import Board from "../pages/Board"
 import Logout from "../pages/Logout"
 import MyMessages from "../pages/MyMessages"
+import AuthGuard from "../components/AuthGuard"
 
 export const router = createBrowserRouter(
     [
@@ -31,7 +32,9 @@ export const router = createBrowserRouter(
                 },
                 {
                     path: "/my-messages",
-                    element: <MyMessages />
+                    element: <AuthGuard>
+                                <MyMessages />
+                            </AuthGuard> 
                 },
             ]
         }

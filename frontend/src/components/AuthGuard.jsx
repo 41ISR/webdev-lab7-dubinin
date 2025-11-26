@@ -6,8 +6,11 @@ const AuthGuard = ({children}) => {
     const navigate = useNavigate()
     const {session} = useUserStore()
     useEffect(() => {
-        
+        if (!session?.token) navigate("/signin")
     }, [])
+
+    if (!session?.token) return <></>
+
     return (
         children
     )
