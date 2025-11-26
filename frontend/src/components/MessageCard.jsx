@@ -2,7 +2,7 @@ import { api } from "../api/api"
 import { useUserStore } from "../store/useUserStore"
 import { useMessageStore } from "../store/useMessageStore"
 
-const MessageCard = ({ id, content, username, createdAt, userId, likedBy }) => {
+const MessageCard = ({ id, likes, content, username, createdAt, userId, likedBy }) => {
     const { session } = useUserStore()
     const { getMessages } = useMessageStore()
 
@@ -34,7 +34,7 @@ const MessageCard = ({ id, content, username, createdAt, userId, likedBy }) => {
                 <span className="message-time">{createdAt}</span>
             </div>
             <div className="message-actions">
-                <button onClick={handleLike} className="action-button"><span>{isLiked ? "💗" : "🤍"}</span><span>Нравится</span></button>
+                <button onClick={handleLike} className="action-button"><span>{likes}{isLiked ? "💗" : "🤍"}</span><span>Нравится</span></button>
                 <button onClick={handleReport} className="action-button"><span>🚩</span><span>Пожаловаться</span></button>
                 {isOwn && <button onClick={handleDelete} className="action-button delete" ><span>❌</span><span>Удалить</span></button>}
             </div>
