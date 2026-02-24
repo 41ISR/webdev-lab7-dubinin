@@ -21,6 +21,21 @@
       "likedBy": [],
       "reportedBy": [],
       "createdAt": "2025-10-07T16:48:09.503Z"
+    },
+    {
+      "id": 3,
+      "content": "Текст сообщения капибар",
+      "userId": 2,
+      "username": "кап",
+      "likes": 1,
+      "reports": 1,
+      "likedBy": [
+        2
+      ],
+      "reportedBy": [
+        2
+      ],
+      "createdAt": "2025-12-24T21:55:27.409Z"
     }
   ],
   "users": [
@@ -30,6 +45,13 @@
       "email": "pasha@example.com",
       "password": "$2b$10$h92e990XlgD1hreAWfLzKuWrwWgP9j8IWJRQPn72u3MJZTt3yLWRC",
       "createdAt": "2025-10-07T16:22:34.688Z"
+    },
+    {
+      "id": 2,
+      "username": "кап",
+      "email": "capybara@mail.ru",
+      "password": "$2b$10$J8mPqDQMnSbad9JY3X0H1OAwI60qiGUzaHbGL0paCSYKFbWy.jpy.",
+      "createdAt": "2025-12-24T21:46:24.940Z"
     }
   ]
 }

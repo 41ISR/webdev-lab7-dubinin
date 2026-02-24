@@ -1,0 +1,26 @@
+meta {
+  name: messages (post)
+  type: http
+  seq: 6
+}
+
+post {
+  url: http://localhost:3001/api/messages
+  body: json
+  auth: inherit
+}
+
+headers {
+  Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInVzZXJuYW1lIjoi0LrQsNC_IiwiaWF0IjoxNzY2NjEyODU1LCJleHAiOjE3NjY2OTkyNTV9.4gYW3QrJYSYaXpEiINK2OT2yKwoEohAzk7LbT5AXu4U
+}
+
+body:json {
+  {
+    "content": "Текст сообщения капибар"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

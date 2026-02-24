@@ -32,9 +32,11 @@ export const router = createBrowserRouter(
                 },
                 {
                     path: "/my-messages",
-                    element: <AuthGuard>
-                                <MyMessages />
-                            </AuthGuard> 
+                    element: (
+                        <AuthGuard>
+                            <MyMessages />
+                        </AuthGuard>
+                    )
                 },
             ]
         }

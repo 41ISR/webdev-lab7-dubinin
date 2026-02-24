@@ -2,9 +2,10 @@ import { useNavigate } from "react-router-dom"
 import { useUserStore } from "../store/useUserStore"
 import { useEffect } from "react"
 
-const AuthGuard = ({children}) => {
+const AuthGuard = ({ children }) => {
     const navigate = useNavigate()
-    const {session} = useUserStore()
+    const { session } = useUserStore()
+    
     useEffect(() => {
         if (!session?.token) navigate("/signin")
     }, [])
@@ -15,6 +16,5 @@ const AuthGuard = ({children}) => {
         children
     )
 }
-
 
 export default AuthGuard

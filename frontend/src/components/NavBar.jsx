@@ -3,7 +3,7 @@ import { useUserStore } from '../store/useUserStore'
 
 const NavBar = () => {
     const { session } = useUserStore()
-    
+
     return (
         <div className="navbar">
             <div className="navbar-container">
