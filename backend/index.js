@@ -196,6 +196,7 @@ app.get('/api/messages', async (req, res) => {
                 likes: m.likes,
                 reports: m.reports,
                 likedBy: m.likedBy,
+                reportedBy: m.reportedBy || [],
                 createdAt: m.createdAt,
             }))
             .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt))

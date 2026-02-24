@@ -1,0 +1,23 @@
+meta {
+  name: message
+  type: http
+  seq: 5
+}
+
+get {
+  url: http://localhost:3001/api/messages
+  body: none
+  auth: inherit
+}
+
+body:json {
+  {
+    "username": "кап",
+    "password": "капиба"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
